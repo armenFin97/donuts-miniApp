@@ -3,23 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fix relative paths on GitHub Pages (repo name must match your GitHub repo) -->
-    <script>
-      (function () {
-        if (location.hostname === 'localhost' || location.protocol === 'file:') return;
-        var base = document.createElement('base');
-        base.href = '/' + (location.pathname.split('/')[1] || 'donuts-miniApp') + '/';
-        document.head.insertBefore(base, document.head.firstChild);
-      })();
-    </script>
-    <link rel="icon" type="image/svg+xml" href="./assets/svg/donut.svg">
-    <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <!-- Required for GitHub Pages: change to your repo name. For local dev use base href="./" -->
+    <base href="/donuts-miniApp/">
+    <link rel="icon" type="image/svg+xml" href="assets/svg/donut.svg">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="./scripts/script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <title>Donuts game</title>
 </head>
 
@@ -29,51 +22,51 @@
             <h2 class="title">Click on the donuts to pack <span class="bg-blue">groups of 2</span></h2>
             <div class="boxes-row">
                 <div class="box-wrap box-current" data-box="0">
-                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="./assets/svg/sprites.svg#box"/></svg>
-                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="./assets/svg/sprites.svg#closed-box"/></svg>
+                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="assets/svg/sprites.svg#box"/></svg>
+                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="assets/svg/sprites.svg#closed-box"/></svg>
                     <div class="box-donuts"></div>
                 </div>
                 <div class="box-wrap box-next" data-box="1">
-                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="./assets/svg/sprites.svg#box"/></svg>
-                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="./assets/svg/sprites.svg#closed-box"/></svg>
+                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="assets/svg/sprites.svg#box"/></svg>
+                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="assets/svg/sprites.svg#closed-box"/></svg>
                     <div class="box-donuts"></div>
                 </div>
                 <div class="box-wrap box-next" data-box="2">
-                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="./assets/svg/sprites.svg#box"/></svg>
-                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="./assets/svg/sprites.svg#closed-box"/></svg>
+                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="assets/svg/sprites.svg#box"/></svg>
+                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="assets/svg/sprites.svg#closed-box"/></svg>
                     <div class="box-donuts"></div>
                 </div>
                 <div class="box-wrap box-next" data-box="3">
-                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="./assets/svg/sprites.svg#box"/></svg>
-                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="./assets/svg/sprites.svg#closed-box"/></svg>
+                    <svg class="box-icon box-open" width="170" height="78" aria-hidden="true"><use href="assets/svg/sprites.svg#box"/></svg>
+                    <svg class="box-icon box-closed" width="170" height="66" aria-hidden="true"><use href="assets/svg/sprites.svg#closed-box"/></svg>
                     <div class="box-donuts"></div>
                 </div>
             </div>
             <div class="game-area">
                 <div class="donuts-row">
                     <button type="button" class="donut-btn donut-1" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-2" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-3" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-4" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-5" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-6" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-7" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                     <button type="button" class="donut-btn donut-8" aria-label="Donut">
-                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="./assets/svg/sprites.svg#donut"/></svg>
+                        <svg class="donut-icon" width="60" height="60" aria-hidden="true"><use href="assets/svg/sprites.svg#donut"/></svg>
                     </button>
                 </div>
                 <div class="task-phase is-hidden">
