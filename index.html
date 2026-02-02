@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Required for GitHub Pages: change to your repo name. For local dev use base href="./" -->
+    <script>
+      (function () {
+        if (location.protocol === 'file:' || location.hostname === 'localhost') return;
+        var p = location.pathname;
+        if (p !== '/' && !p.endsWith('/') && !/\.[a-z0-9]+$/i.test(p)) {
+          location.replace(p + '/' + (location.search || '') + (location.hash || ''));
+        }
+      })();
+    </script>
     <base href="/donuts-miniApp/">
     <link rel="icon" type="image/svg+xml" href="assets/svg/donut.svg">
     <link rel="stylesheet" href="styles/base.css">
