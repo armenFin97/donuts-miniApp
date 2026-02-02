@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.4;
+  background: #fff;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+input,
+.answer-input {
+  user-select: text;
+}
+
+svg {
+  display: block;
+}
+
+h2 {
+    margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
