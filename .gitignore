@@ -1,0 +1,21 @@
+# IDE / Editor
+.idea/
+.vscode/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Dependencies (if you add npm later)
+node_modules/
+
+# Logs and temp
+*.log
+*.tmp
+.cache/
+
+# Local env (if you add any)
+.env
+.env.local

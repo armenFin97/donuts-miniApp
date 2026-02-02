@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fix relative paths on GitHub Pages (repo name must match your GitHub repo) -->
+    <script>
+      (function () {
+        if (location.hostname === 'localhost' || location.protocol === 'file:') return;
+        var base = document.createElement('base');
+        base.href = '/' + (location.pathname.split('/')[1] || 'donuts-miniApp') + '/';
+        document.head.insertBefore(base, document.head.firstChild);
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="./assets/svg/donut.svg">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/main.css">
